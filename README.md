@@ -4,7 +4,7 @@
 
 Here the final result:
 
-![](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2020/3/3c71cc99d2fc1c12a3d3.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20200425%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200425T151028Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=2a626ee71ff4e09db29495acf0546be1a9ac868e8d7c64ece7f8064ecbada843)
+![](./images/readme/finalview.jpg)
 
 Tasks
 -----
@@ -46,7 +46,7 @@ CSS:
 
 Final result:
 
-![](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2020/4/044058b378bfef994b7c9dd672de1dca33d5f576.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20200425%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200425T151028Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=279436653ce75f8e968c2ddb9918695029ce77c98d35fd93f254fc93108d0dcf)
+![](images/readme/1-homepage.gif)
 
 #### 2\. Homepage - popular tutorials
 
@@ -62,7 +62,7 @@ Replace static video cards by dynamic loading:
 
 Final result:
 
-![](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2020/4/0efb5ff68c622f830a70e7aaf16bac87822462af.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20200425%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200425T151028Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=0571fe1718ce5a4ab72d6a84b15ce7ade3278012029fc5f66bd79181d990f41b)
+![](images/readme/2-homepage.gif)
 
 #### 3\. Homepage - latest videos
 
@@ -78,7 +78,7 @@ Replace static video card by dynamic loading:
 
 Final result:
 
-![](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2020/4/c9a421edef604cee434f02f26328f6a549abd81a.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20200425%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200425T151028Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=65bccf8779b3d26eef09515b6ffc59d6b9222864890d45f0df0d01134ab96c3d)
+![](images/readme/homepage.gif)
 
 
 #### 4\. Pricing - quotes
@@ -117,4 +117,4 @@ Replace static video card by dynamic loading:
     -   A new Topic is selected
     -   A new Sort by is selected
 
-![](https://holbertonintranet.s3.amazonaws.com/uploads/medias/2020/4/b081f3358ab5e79f44afc847d882bcf6fd5ef517.gif?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIARDDGGGOUWMNL5ANN%2F20200425%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20200425T151028Z&X-Amz-Expires=86400&X-Amz-SignedHeaders=host&X-Amz-Signature=4ba71aee71658a664c98583688a46f5a91221b201c7077a7f9b1f76560ad3237)
+![](images/readme/courses.gif)
