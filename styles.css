@@ -297,6 +297,20 @@ body {
   color: #C271FF;
 }
 
+.latest-videos {
+  margin-bottom: 87px;
+}
+
+.latest-videos h2 {
+  text-align: center;
+  margin-top: 87px;
+  margin-bottom: 70px;
+}
+
+.latest-videos span {
+  color: #C271FF;
+}
+
 .membership-section {
   background-color: #071629;
   color: #FFFFFF;

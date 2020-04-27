@@ -155,20 +155,21 @@ function carouselQuotes() {
     })
 }
 
-function addPopularVideoCard(data) {
-  function starts(num){
-    var html = "";
-    for (let cont=0 ; cont < 5; cont++) {
-      if (cont < num)
-      {
-        html += `<i class="star-on"><img src="./images/star_on.png" alt="star-on"></i>`
-      }else{
-        html += '<i class="star-off"><img src="./images/star_off.png" alt="star-off"></i>'
-      }
-      
+function starts(num){
+  var html = "";
+  for (let cont=0 ; cont < 5; cont++) {
+    if (cont < num)
+    {
+      html += `<i class="star-on"><img src="./images/star_on.png" alt="star-on"></i>`
+    }else{
+      html += '<i class="star-off"><img src="./images/star_off.png" alt="star-off"></i>'
     }
-    return html;
+    
   }
+  return html;
+}
+
+function addPopularVideoCard(data) {
     $(".popular-tutorials .MultiCarousel-inner").append(
         `<div class="item">
         <div class="card mb-3">
@@ -213,9 +214,55 @@ function popularVideos() {
     })
 }
 
+function addLatestVideoCard(data) {
+    $(".latest-videos .MultiCarousel-inner").append(
+        `<div class="item">
+        <div class="card mb-3">
+          <img src=${data.thumb_url} class="card-img-top" alt="...">
+          <i class="icon-play"></i>
+          <div class="card-body">
+            <h5 class="card-title">${data.title}</h5>
+            <p class="card-text text-muted">${data["sub-title"]}</p>
+            <div class="card-text"><div class="author-rating">
+              <div class="author">
+                <img src=${data.author_pic_url} alt="profile1" class="rounded-circle">
+                <h6 class="author-name">${data.author}</h6>
+              </div>
+              <div class="rating">
+                <div class="stars">
+                 ${starts(data.star)}
+                </div>
+                <span>${data.duration}</span>
+              </div>
+            </div></div>
+          </div>
+        </div>
+      </div>`
+    )
+}
+
+function latestVideos() {
+    var url = "https://smileschool-api.hbtn.info/latest-videos"; 
+    var test = carosuel();
+
+    $.get(url, function (data, status) {
+        if (status === "success") {
+            $(".latest-videos .loader").remove();
+            for (let index = 0; index < data.length; index++) {
+                addLatestVideoCard(data[index]) ;
+            }
+            test.ResCarouselSize();
+            
+        } else {
+            alert("Server Error")
+        }
+    })
+}
+
 
 $( document ).ready(function() {
     carouselQuotes();
     popularVideos();
+    latestVideos();
     carosuel();
 });

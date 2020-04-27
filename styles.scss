@@ -269,6 +269,18 @@ body{
     }
 }
 
+.latest-videos {
+    margin-bottom: 87px;
+    h2{
+        text-align: center;
+        margin-top: 87px;
+        margin-bottom: 70px;
+    }
+    span {
+        color: $purple;
+    }
+}
+
 .membership-section {
     background-color: $dark;
     color: $white;
