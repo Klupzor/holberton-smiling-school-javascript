@@ -176,40 +176,92 @@ body {
 }
 
 .popular-tutorials {
-  /*
-        code by Iatek LLC 2018 - CC 2.0 License - Attribution required
-        code customized by Azmind.com
-    */
-  /* MD */
-  /* LG */
+  margin-bottom: 87px;
 }
 
-.popular-tutorials .carousel .carousel-control-prev-icon {
-  background-image: url("./images//arrow_black_left.png");
+.popular-tutorials h2 {
+  text-align: center;
+  margin-top: 87px;
+  margin-bottom: 70px;
+}
+
+.popular-tutorials span {
+  color: #C271FF;
+}
+
+.MultiCarousel {
+  float: left;
+  overflow: hidden;
+  padding: 15px;
+  width: 100%;
+  position: relative;
+}
+
+.MultiCarousel .MultiCarousel-inner {
+  -webkit-transition: 1s ease all;
+  transition: 1s ease all;
+  float: left;
+}
+
+.MultiCarousel .MultiCarousel-inner .item {
+  float: left;
+}
+
+.MultiCarousel .leftLst, .MultiCarousel .rightLst {
+  position: absolute;
+  border-radius: 50%;
+  top: calc(50% - 20px);
+  cursor: pointer;
+}
+
+.MultiCarousel .leftLst {
+  left: 0;
+  background-image: url("./images/arrow_black_left.png");
+  background-position: left;
   height: 63px;
+  width: 30px;
 }
 
-.popular-tutorials .carousel .carousel-control-next-icon {
+.MultiCarousel .rightLst {
+  right: 0;
   background-image: url("./images/arrow_black_right.png");
+  background-position: right;
   height: 63px;
+  width: 30px;
 }
 
-.popular-tutorials .card {
+.MultiCarousel .leftLst.over, .MultiCarousel .rightLst.over {
+  display: none;
+}
+
+.MultiCarousel .icon-play {
+  background-image: url("images/play.png");
+  background-size: 64px;
+  height: 64px;
+  width: 64px;
+  position: absolute;
+  left: 38%;
+  top: 14%;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.MultiCarousel .card {
   height: 335px;
   width: 255px;
   margin: 0 auto;
 }
 
-.popular-tutorials .card .card-title {
+.MultiCarousel .card .card-title {
   font-weight: bold;
   font-size: 16px;
 }
 
-.popular-tutorials .card .card-text {
+.MultiCarousel .card .card-text {
   font-size: 14px;
 }
 
-.popular-tutorials .card .author-rating .author {
+.MultiCarousel .card .author-rating .author {
   height: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -217,17 +269,17 @@ body {
   color: #C271FF;
 }
 
-.popular-tutorials .card .author-rating .author img {
+.MultiCarousel .card .author-rating .author img {
   height: 100%;
   width: auto;
 }
 
-.popular-tutorials .card .author-rating .author .author-name {
+.MultiCarousel .card .author-rating .author .author-name {
   margin: auto 0 auto 13px;
   font-size: 14px;
 }
 
-.popular-tutorials .card .rating {
+.MultiCarousel .card .rating {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -236,167 +288,13 @@ body {
           justify-content: space-between;
 }
 
-.popular-tutorials .card .rating .stars .star-on img, .popular-tutorials .card .rating .stars .star-off img {
+.MultiCarousel .card .rating .stars .star-on img, .MultiCarousel .card .rating .stars .star-off img {
   height: 15px;
   width: 15px;
 }
 
-.popular-tutorials .card .rating span {
+.MultiCarousel .card .rating span {
   color: #C271FF;
-}
-
-@media (min-width: 768px) and (max-width: 991px) {
-  .popular-tutorials {
-    /* Show 4th slide on md if col-md-4*/
-  }
-  .popular-tutorials .carousel-inner .active.col-md-4.carousel-item + .carousel-item + .carousel-item + .carousel-item {
-    position: absolute;
-    top: 0;
-    right: -33.3333%;
-    /*change this with javascript in the future*/
-    z-index: -1;
-    display: block;
-    visibility: visible;
-  }
-}
-
-@media (min-width: 576px) and (max-width: 768px) {
-  .popular-tutorials {
-    /* Show 3rd slide on sm if col-sm-6*/
-  }
-  .popular-tutorials .carousel-inner .active.col-sm-6.carousel-item + .carousel-item + .carousel-item {
-    position: absolute;
-    top: 0;
-    right: -50%;
-    /*change this with javascript in the future*/
-    z-index: -1;
-    display: block;
-    visibility: visible;
-  }
-}
-
-@media (min-width: 576px) {
-  .popular-tutorials {
-    /* show 2 items */
-    /* left or forward direction */
-    /* farthest right hidden item must be also positioned for animations */
-    /* right or prev direction */
-  }
-  .popular-tutorials .carousel-item {
-    margin-right: 0;
-  }
-  .popular-tutorials .carousel-inner .active + .carousel-item {
-    display: block;
-  }
-  .popular-tutorials .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left),
-  .popular-tutorials .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item {
-    -webkit-transition: none;
-    transition: none;
-  }
-  .popular-tutorials .carousel-inner .carousel-item-next {
-    position: relative;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-  .popular-tutorials .active.carousel-item-left + .carousel-item-next.carousel-item-left,
-  .popular-tutorials .carousel-item-next.carousel-item-left + .carousel-item,
-  .popular-tutorials .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item {
-    position: relative;
-    -webkit-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0);
-    visibility: visible;
-  }
-  .popular-tutorials .carousel-inner .carousel-item-prev.carousel-item-right {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    display: block;
-    visibility: visible;
-  }
-  .popular-tutorials .active.carousel-item-right + .carousel-item-prev.carousel-item-right,
-  .popular-tutorials .carousel-item-prev.carousel-item-right + .carousel-item,
-  .popular-tutorials .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item {
-    position: relative;
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
-    visibility: visible;
-    display: block;
-    visibility: visible;
-  }
-}
-
-@media (min-width: 768px) {
-  .popular-tutorials {
-    /* show 3rd of 3 item slide */
-    /* left or forward direction */
-    /* right or prev direction */
-  }
-  .popular-tutorials .carousel-inner .active + .carousel-item + .carousel-item {
-    display: block;
-  }
-  .popular-tutorials .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item {
-    -webkit-transition: none;
-    transition: none;
-  }
-  .popular-tutorials .carousel-inner .carousel-item-next {
-    position: relative;
-    -webkit-transform: translate3d(0, 0, 0);
-            transform: translate3d(0, 0, 0);
-  }
-  .popular-tutorials .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item {
-    position: relative;
-    -webkit-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0);
-    visibility: visible;
-  }
-  .popular-tutorials .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item {
-    position: relative;
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
-    visibility: visible;
-    display: block;
-    visibility: visible;
-  }
-}
-
-@media (min-width: 991px) {
-  .popular-tutorials {
-    /* show 4th item */
-    /* Show 5th slide on lg if col-lg-3 */
-    /* left or forward direction */
-    /* right or prev direction //t - previous slide direction last item animation fix */
-  }
-  .popular-tutorials .carousel-inner .active + .carousel-item + .carousel-item + .carousel-item {
-    display: block;
-  }
-  .popular-tutorials .carousel-inner .carousel-item.active:not(.carousel-item-right):not(.carousel-item-left) + .carousel-item + .carousel-item + .carousel-item {
-    -webkit-transition: none;
-    transition: none;
-  }
-  .popular-tutorials .carousel-inner .active.col-lg-3.carousel-item + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-    position: absolute;
-    top: 0;
-    right: -25%;
-    /*change this with javascript in the future*/
-    z-index: -1;
-    display: block;
-    visibility: visible;
-  }
-  .popular-tutorials .carousel-item-next.carousel-item-left + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-    position: relative;
-    -webkit-transform: translate3d(-100%, 0, 0);
-            transform: translate3d(-100%, 0, 0);
-    visibility: visible;
-  }
-  .popular-tutorials .carousel-item-prev.carousel-item-right + .carousel-item + .carousel-item + .carousel-item + .carousel-item {
-    position: relative;
-    -webkit-transform: translate3d(100%, 0, 0);
-            transform: translate3d(100%, 0, 0);
-    visibility: visible;
-    display: block;
-    visibility: visible;
-  }
 }
 
 .membership-section {
