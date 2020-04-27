@@ -447,6 +447,51 @@ footer .footer .social-media svg {
   color: grey;
 }
 
+.price-quotes {
+  background-color: #C271FF;
+}
+
+.price-quotes .carousel-inner {
+  padding-top: 108px;
+  padding-bottom: 124px;
+}
+
+.price-quotes .card {
+  background-color: #C271FF;
+  font-size: 22px;
+  max-width: 943px;
+  width: 80%;
+  margin: 0 auto;
+  color: white;
+  border: none;
+}
+
+.price-quotes .card img {
+  height: 160px;
+  width: 160px;
+  margin: 0 auto;
+}
+
+.price-quotes .card .card-title {
+  font-weight: bold;
+}
+
+.price-quotes .carousel-control-prev-icon {
+  background-image: url("./images/arrow_white_left.png");
+  height: 63px;
+}
+
+.price-quotes .carousel-control-next-icon {
+  background-image: url("./images/arrow_white_right.png");
+  height: 63px;
+}
+
+@media (max-width: 576px) {
+  .price-quotes .carousel-control-next, .price-quotes .carousel-control-prev {
+    bottom: 40%;
+  }
+}
+
 .section-faq h2 {
   text-align: center;
   margin-top: 74px;

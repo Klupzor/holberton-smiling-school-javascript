@@ -396,6 +396,47 @@ footer {
     }
 }
 
+.price-quotes {
+    background-color: $purple;
+    .carousel-inner {
+        padding-top: 108px;
+        padding-bottom: 124px;
+    }
+    .card {
+        background-color: $purple;
+        font-size: 22px;
+        max-width: 943px;
+        width: 80%;
+        margin: 0 auto;
+        color: white;
+        border: none;
+        img {
+            height: 160px;
+            width: 160px;
+            margin: 0 auto;
+        }
+        .card-title {
+            font-weight: bold;
+        }
+    }
+
+    .carousel-control-prev-icon {
+        background-image: url("./images/arrow_white_left.png");
+        height: 63px;
+    }
+
+    .carousel-control-next-icon {
+        background-image: url("./images/arrow_white_right.png");
+        height: 63px;
+    }
+    @media (max-width: $size-mobile) {
+        .carousel-control-next, .carousel-control-prev {
+            bottom: 40%;
+        }
+    }
+}
+
+
 .section-faq {
     h2 {
         text-align: center;

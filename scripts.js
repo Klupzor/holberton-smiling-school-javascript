@@ -107,8 +107,9 @@ function carosuel() {
 };
 
 // --------------------Carrousel Quotes------------------
-function addQuote(data) {
-    $(".carousel-quotes .carousel-inner").append(
+function addQuote(data, cls) {
+    var dir = cls + " .carousel-inner"
+    $(dir).append(
         `<div class="carousel-item">
             <div class="card mb-3">
                 <div class="row no-gutters">
@@ -135,7 +136,7 @@ function carouselQuotes() {
         if (status === "success") {
             $(".carousel-quotes .loader").remove();
             for (let index = 0; index < data.length; index++) {
-                addQuote(data[index]) ;
+                addQuote(data[index], ".carousel-quotes") ;
             }
             $(".carousel-quotes .carousel-inner .carousel-item").first().addClass( "active" );
             $(".carousel-quotes").append(
@@ -259,10 +260,38 @@ function latestVideos() {
     })
 }
 
+function priceQuotes() {
+    var url = "https://smileschool-api.hbtn.info/quotes"; 
+
+    $.get(url, function (data, status) {
+        if (status === "success") {
+            $(".price-quotes .loader").remove();
+            for (let index = 0; index < data.length; index++) {
+                addQuote(data[index], ".price-quotes") ;
+            }
+            $(".price-quotes .carousel-inner .carousel-item").first().addClass( "active" );
+            $(".price-quotes").append(
+                `<a class="carousel-control-prev" href="#carouselPriceControls" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next" href="#carouselPriceControls" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>`
+            );
+            
+        } else {
+            alert("Server Error")
+        }
+    })
+}
+
 
 $( document ).ready(function() {
     carouselQuotes();
     popularVideos();
     latestVideos();
+    priceQuotes();
     carosuel();
 });
