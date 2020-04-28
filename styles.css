@@ -246,22 +246,22 @@ body {
   cursor: pointer;
 }
 
-.MultiCarousel .card {
+.card {
   height: 335px;
   width: 255px;
   margin: 0 auto;
 }
 
-.MultiCarousel .card .card-title {
+.card .card-title {
   font-weight: bold;
   font-size: 16px;
 }
 
-.MultiCarousel .card .card-text {
+.card .card-text {
   font-size: 14px;
 }
 
-.MultiCarousel .card .author-rating .author {
+.card .author-rating .author {
   height: 30px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -269,17 +269,17 @@ body {
   color: #C271FF;
 }
 
-.MultiCarousel .card .author-rating .author img {
+.card .author-rating .author img {
   height: 100%;
   width: auto;
 }
 
-.MultiCarousel .card .author-rating .author .author-name {
+.card .author-rating .author .author-name {
   margin: auto 0 auto 13px;
   font-size: 14px;
 }
 
-.MultiCarousel .card .rating {
+.card .rating {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -288,12 +288,12 @@ body {
           justify-content: space-between;
 }
 
-.MultiCarousel .card .rating .stars .star-on img, .MultiCarousel .card .rating .stars .star-off img {
+.card .rating .stars .star-on img, .card .rating .stars .star-off img {
   height: 15px;
   width: 15px;
 }
 
-.MultiCarousel .card .rating span {
+.card .rating span {
   color: #C271FF;
 }
 
@@ -543,5 +543,36 @@ footer .footer .social-media svg {
     -webkit-transform: rotate(360deg);
             transform: rotate(360deg);
   }
+}
+
+.courses {
+  background-image: url("./images/pic_3.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: #071629;
+  color: #FFFFFF;
+}
+
+.courses .courses-header {
+  padding-bottom: 51px;
+}
+
+.courses .courses-header h1 {
+  text-align: center;
+  font-size: 32px;
+  font-family: "Coiny";
+}
+
+.courses .courses-header h1 span {
+  color: #C271FF;
+}
+
+.courses-form-section {
+  background-color: #C271FF;
+}
+
+.videos {
+  min-height: 80px;
 }
 /*# sourceMappingURL=styles.css.map */

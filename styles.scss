@@ -2,6 +2,7 @@ $purple: #C271FF;
 $white: #FFFFFF;
 $dark: #071629;
 $font: 'Source Sans Pro';
+$font-coiny: 'Coiny';
 $color-transparent: rgba(0,0,0,0);
 $size-tablet: 768px;
 $size-mobile: 576px;
@@ -225,46 +226,46 @@ body{
         z-index: 1;
         cursor: pointer;
    }
-    .card {
-        height: 335px;
-        width: 255px;
-        margin: 0 auto;
-        .card-title {
-            font-weight: bold;
-            font-size: 16px;
-        }
-        .card-text{
-            font-size: 14px;
-        }
-        .author-rating {
-            .author {
-                height: 30px;
-                display: flex;
-                color: $purple;
-                img {
-                    height: 100%;
-                    width: auto;
-                }
-                .author-name{
-                    margin: auto 0 auto 13px;
-                    font-size: 14px;
-                }
-            }
-        }
-        .rating{
+}
+.card {
+    height: 335px;
+    width: 255px;
+    margin: 0 auto;
+    .card-title {
+        font-weight: bold;
+        font-size: 16px;
+    }
+    .card-text{
+        font-size: 14px;
+    }
+    .author-rating {
+        .author {
+            height: 30px;
             display: flex;
-            justify-content: space-between;
-            .stars{
-                .star-on, .star-off{
-                    img {
-                        height: 15px;
-                        width: 15px;
-                    }
+            color: $purple;
+            img {
+                height: 100%;
+                width: auto;
+            }
+            .author-name{
+                margin: auto 0 auto 13px;
+                font-size: 14px;
+            }
+        }
+    }
+    .rating{
+        display: flex;
+        justify-content: space-between;
+        .stars{
+            .star-on, .star-off{
+                img {
+                    height: 15px;
+                    width: 15px;
                 }
             }
-            span {
-                color: $purple;
-            }
+        }
+        span {
+            color: $purple;
         }
     }
 }
@@ -471,4 +472,32 @@ footer {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+.courses {
+    background-image: url("./images/pic_3.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: $dark;
+    color: $white;
+    .courses-header {
+        padding-bottom: 51px;
+        h1 {
+            text-align: center;
+            font-size: 32px;
+            font-family: $font-coiny;
+            span {
+                color: $purple;
+            }
+        }
+    }
+}
+
+.courses-form-section {
+    background-color: $purple;
+}
+
+.videos {
+    min-height: 80px;
 }

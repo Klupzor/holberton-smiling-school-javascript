@@ -108,7 +108,7 @@ function carosuel() {
 
 // --------------------Carrousel Quotes------------------
 function addQuote(data, cls) {
-    var dir = cls + " .carousel-inner"
+    var dir = cls + " .carousel-inner";
     $(dir).append(
         `<div class="carousel-item">
             <div class="card mb-3">
@@ -287,6 +287,52 @@ function priceQuotes() {
     })
 }
 
+function addVideoCard(data) {
+    $(".videos").append(
+        `<div class="card mb-4">
+          <img src=${data.thumb_url} class="card-img-top" alt="...">
+          <i class="icon-play"></i>
+          <div class="card-body">
+            <h5 class="card-title">${data.title}</h5>
+            <p class="card-text text-muted">${data["sub-title"]}</p>
+            <div class="card-text"><div class="author-rating">
+              <div class="author">
+                <img src=${data.author_pic_url} alt="profile1" class="rounded-circle">
+                <h6 class="author-name">${data.author}</h6>
+              </div>
+              <div class="rating">
+                <div class="stars">
+                 ${starts(data.star)}
+                </div>
+                <span>${data.duration}</span>
+              </div>
+            </div></div>
+          </div>
+        </div>`
+    )
+}
+
+function getVideos(q, topic, sort) {
+    var url = "https://smileschool-api.hbtn.info/courses";
+
+    $(".videos").empty();
+    $(".videos").append(`<div style="min-height: 120px;padding: 20px;"><div class="loader"></div></div>`);
+
+
+    $.get(url, function (data, status) {
+        if (status === "success") {
+            $(".videos").empty();
+            for (let index = 0; index < data.courses.length; index++) {
+                addVideoCard(data.courses[index]) ;
+            }
+            
+        } else {
+            alert("Server Error")
+        }
+    })
+
+}
+
 
 $( document ).ready(function() {
     carouselQuotes();
@@ -294,4 +340,5 @@ $( document ).ready(function() {
     latestVideos();
     priceQuotes();
     carosuel();
+    getVideos();
 });
