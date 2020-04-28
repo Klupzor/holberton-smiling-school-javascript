@@ -584,6 +584,10 @@ footer .footer .social-media svg {
   font-size: 23px;
 }
 
+.courses-form-section .courses-form select option {
+  color: black;
+}
+
 .courses-form-section .courses-form span {
   color: white;
   font-weight: bold;
@@ -597,7 +601,7 @@ footer .footer .social-media svg {
 
 .video-section .numVideos {
   margin-top: 47px;
-  color: rgba(7, 22, 41, 0.296247);
+  color: rgba(7, 22, 41, 0.3);
   margin-bottom: 47px;
 }
 
