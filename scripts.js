@@ -319,13 +319,17 @@ function getVideos(q, topic, sort) {
     $(".videos").append(`<div style="min-height: 120px;padding: 20px;"><div class="loader"></div></div>`);
 
 
-    $.get(url, function (data, status) {
+    $.get(url, {q: q, topic:topic, sort:sort})
+    .done(function (data, status) {
+        let index = 0;
         if (status === "success") {
             $(".videos").empty();
-            for (let index = 0; index < data.courses.length; index++) {
+            for (index; index < data.courses.length; index++) {
                 addVideoCard(data.courses[index]) ;
             }
-            
+            $(".numVideos").remove();
+            $(".video-section").prepend(
+                `<div class="numVideos">${index} videos</div>`);
         } else {
             alert("Server Error")
         }
@@ -333,6 +337,30 @@ function getVideos(q, topic, sort) {
 
 }
 
+function fillFormInputs() {
+    var url = "https://smileschool-api.hbtn.info/courses";
+
+    $.get(url, function (data, status) {
+        if (status === "success") {
+            for (let index = 0; index < data.topics.length; index++) {
+                let string = data.topics[index];
+                string = string[0].toUpperCase() + string.slice(1);
+                $(".courses-form #topic").append(`<option>${string}</option>`)
+            }
+            $(".courses-form #topic option").first().attr("selected","selected");
+
+            for (let index = 0; index < data.sorts.length; index++) {
+                let string = data.sorts[index];
+                string = string[0].toUpperCase() + string.slice(1);
+                string = string.replace("_", " ");
+                $(".courses-form #sortBy").append(`<option>${string}</option>`)
+            }
+            $(".courses-form #sortBy option").first().attr("selected","selected");
+        } else {
+            alert("Server Error")
+        }
+    })
+}
 
 $( document ).ready(function() {
     carouselQuotes();
@@ -340,5 +368,12 @@ $( document ).ready(function() {
     latestVideos();
     priceQuotes();
     carosuel();
+    fillFormInputs();
     getVideos();
+    $( ".target" ).change(function() {
+        var keyword = $( "#keywords" ).val();
+        var topic = $("#topic").val();
+        var sortBy = $("#sortBy").val();
+        getVideos(keyword, topic, sortBy)
+      });
 });

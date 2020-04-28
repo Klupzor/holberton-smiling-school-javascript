@@ -496,8 +496,34 @@ footer {
 
 .courses-form-section {
     background-color: $purple;
-}
 
-.videos {
-    min-height: 80px;
+    .courses-form{
+        padding-top: 29px;
+        input, select {
+            background-color: rgba(255, 255, 255, 0.25);
+            color: white;
+            border: none;
+            font-weight: 300;
+            font-size: 23px;
+        }
+       span {
+           color: white;
+           font-weight: bold;
+            font-size: 12px;
+       }
+       #basic-addon1{
+        background-color: rgba(255, 255, 255, 0.25);
+           border: none;
+       }
+    }
+}
+.video-section {
+    .numVideos {
+        margin-top: 47px;
+        color: rgba(7, 22, 41, 0.296247);
+        margin-bottom: 47px;;
+    }
+    .videos {
+        min-height: 80px;
+    }
 }

@@ -572,7 +572,36 @@ footer .footer .social-media svg {
   background-color: #C271FF;
 }
 
-.videos {
+.courses-form-section .courses-form {
+  padding-top: 29px;
+}
+
+.courses-form-section .courses-form input, .courses-form-section .courses-form select {
+  background-color: rgba(255, 255, 255, 0.25);
+  color: white;
+  border: none;
+  font-weight: 300;
+  font-size: 23px;
+}
+
+.courses-form-section .courses-form span {
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.courses-form-section .courses-form #basic-addon1 {
+  background-color: rgba(255, 255, 255, 0.25);
+  border: none;
+}
+
+.video-section .numVideos {
+  margin-top: 47px;
+  color: rgba(7, 22, 41, 0.296247);
+  margin-bottom: 47px;
+}
+
+.video-section .videos {
   min-height: 80px;
 }
 /*# sourceMappingURL=styles.css.map */
