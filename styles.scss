@@ -11,6 +11,10 @@ body{
     font-family: $font;
 }
 
+a:hover {
+    color: $purple !important;
+}
+
 .btn {
     background-color: $purple;
     color: $white;

@@ -2,6 +2,10 @@ body {
   font-family: "Source Sans Pro";
 }
 
+a:hover {
+  color: #C271FF !important;
+}
+
 .btn {
   background-color: #C271FF;
   color: #FFFFFF;
